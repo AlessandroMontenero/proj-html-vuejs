@@ -24,7 +24,7 @@ const { createApp } = Vue
           {
             label: 'COURSES',
             url: '#',
-            new: false
+            new: true
           },
           {
             label: 'LOCATIONS',

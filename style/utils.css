@@ -12,6 +12,22 @@ a {
     color: inherit;
 }
 
+/* BANNERS */
+.newBanner {
+    background-color: #7ABC64;
+    width: 2rem;
+    padding: 0 2px;
+    margin: 0 2px;
+    display: inline;
+    filter: brightness(100%);
+    transition: filter 0.1s linear;
+}
+
+
+.new:hover .newBanner {
+    filter: brightness(105%);
+}
+
 /* FONTS */
 html, body {
     font-family: 'Lato', sans-serif;
@@ -49,7 +65,7 @@ header i {
 
 /* CONTAINER */
 .container {
-    width: 65%;
+    width: 70%;
     height: 100%;
     margin: auto;
     display: flex;
@@ -59,7 +75,7 @@ header i {
 
 /* BUTTONS */
 button {
-    height: 40px;
+    height: 35px;
     margin-left: 1rem;
     padding: 0 1rem;
     color: white;
@@ -68,7 +84,15 @@ button {
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
+    font-size: .8rem;
+    filter: brightness(100%);
+    transition: filter 0.1s linear;
 }
+
+button:hover {
+    filter: brightness(105%);
+}
+
 
 .fixedButtons button {
     background-color: var(--white);

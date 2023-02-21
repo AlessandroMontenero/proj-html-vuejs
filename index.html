@@ -47,9 +47,17 @@
           </div>
           <nav>
             <ul>
-              <li v-for="item in navItems">{{item.label}}</li>
+              <li v-for="item in navItems">
+                <div v-if="item.new != true">
+                  <a href="item.url">{{item.label}}</a> 
+                </div>
+                <div class="new" v-else="">
+                  <a href="item.url">{{item.label}}</a> 
+                  <div class="newBanner">NEW</div>
+                </div>
+              </li>
             </ul>
-            <button>BOOK NOW</button>
+            <button> BOOK NOW</button>
           </nav>
         </div>
       </div>
@@ -119,6 +127,8 @@
           </div>
           <h3><i class="fa-solid fa-phone-flip"></i> 1-800-555-555</h3>
         </div>
+      </section>
+        
       </section>
     </main>
 
