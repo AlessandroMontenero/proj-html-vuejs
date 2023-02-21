@@ -22,15 +22,111 @@
     />
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style/utils.css" />
     <link rel="stylesheet" href="./style/style.css" />
     <title>Driving</title>
   </head>
   <body>
-    <div id="app">{{ message }}</div>
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <span><h5>We have a 95% Successful Pass Rate!</h5></span>
+        <span
+          ><i class="fa-solid fa-phone-flip"></i>
+          <h5>Give us a call to book your tuition! 1-800-555-555</h5></span
+        >
+      </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <div class="navbar" id="navbar">
+      <div class="navContainer">
+        <div class="container">
+          <div class="logo">
+            <img src="./images/avada-drivers-logo-2x.png" alt="" />
+          </div>
+          <nav>
+            <ul>
+              <li v-for="item in navItems">{{item.label}}</li>
+            </ul>
+            <button>BOOK NOW</button>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIXED BUTTONS -->
+    <div class="fixedButtons">
+      <button>
+        <i class="fa-solid fa-clapperboard"></i>
+        <h5>Demos</h5>
+      </button>
+      <button>
+        <div class="sale">
+          <span class="dollarSign">$</span>
+          <span class="dollarPrice">39</span>
+        </div>
+        <h5>On Sale</h5>
+      </button>
+    </div>
+
+    <!-- MAIN -->
+    <main id="main">
+      <!-- HERO -->
+      <div class="hero">
+        <div class="container heroContent">
+          <h2>Drive with Avada</h2>
+          <h4>We offer the finest driving tuition money can buy</h4>
+        </div>
+      </div>
+      <section class="callback">
+        <div class="container">
+          <div class="description">
+            <h2>Get Behind The Wheel</h2>
+            <h4>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+              quod labore temporibus ipsum rerum tenetur eius ea tempore
+              voluptatum quos!
+            </h4>
+            <h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi
+              nihil iure dolores excepturi facilis omnis, eius ab harum eum
+              quibusdam obcaecati at dolor eveniet, eaque, commodi molestias
+              enim culpa consectetur architecto? Incidunt consequuntur, quis qui
+              officiis, sed tempore fugiat distinctio beatae aperiam dolores
+              praesentium. Dignissimos, neque! Dolore, alias hic.
+            </h5>
+          </div>
+          <div class="requestACallback" id="requestACallback">
+            <h2>First Lesson Free!</h2>
+            <h4>
+              When you make a block booking with us your first lesson is
+              included free.
+            </h4>
+            <input type="text" placeholder="Your Name*" v-model="newName" />
+            <input type="text" placeholder="Email*" v-model="newEmail" />
+            <input type="text" placeholder="Telephone" v-model="newTelephone" />
+            <input type="text" placeholder="Location" v-model="newLocation" />
+            <button @click="requestACallback()">REQUEST A CALLBACK</button>
+          </div>
+        </div>
+      </section>
+      <section class="startLearningBanner">
+        <div class="container">
+          <div class="startLearning">
+            <h2>Start Learning to Drive Today</h2>
+            <h4>Give us a call to schedule your first driving lesson</h4>
+          </div>
+          <h3><i class="fa-solid fa-phone-flip"></i> 1-800-555-555</h3>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer"></footer>
 
     <!-- Vue -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <script src="https://unpkg.com/vue"></script>
     <!-- Custom JS -->
     <script src="./script/script.js"></script>
   </body>

@@ -1,4 +1,195 @@
-/* FONT */
-html {
-    font-family: 'Lato', sans-serif;
+/* COLORS */
+:root {
+    --green: #7ABC64;
+    --white: #FFFFFF;
+    --whiteGrey: #F6F6F6;
+    --darkGrey: #494C4E;
+    --lightGrey: #929AA3;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    color: var(--lightGrey);
+    background-color: var(--darkGrey);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    height: 0px;
+    top: 0;
+    width: 100%;
+    color: var(--white);
+    z-index: 1;
+}
+
+.navContainer {
+    padding: .7rem 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+}
+
+/* FIXED BUTTONS */
+.fixedButtons {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    top: 90px;
+    right: 0;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.fixedButtons button {
+    padding: 2px;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, .2);
+
+}
+.fixedButtons i {
+    font-size: 2rem;
+}
+.fixedButtons .sale {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: var(--green);
+    margin-left: 4px;
+}
+
+.fixedButtons .dollarPrice {
+    font-size: 2rem;
+}
+
+/* HERO */
+
+.hero {
+    height: 580px;
+    color: var(--white);
+    background-image: url(../images/homepage-hero-background.jpg);
+    width: 100vw;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.heroContent {
+    height: 100%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* MAIN */
+
+/* Callback Section */
+.description {
+    width: 50%;
+    margin: 3rem 0 9rem;
+}
+
+.description h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.callback h4 {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: black;
+    opacity: .6;
+}
+
+.description h5 {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: black;
+    opacity: .5;
+    margin: 1rem 0;
+    line-height: 1.7rem;
+}
+
+.requestACallback {
+    align-self: baseline;
+    width: 50%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    margin-left: 2rem;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, .2);
+    transform: translateY(-25px);
+    background-color: white;
+}
+
+.requestACallback h2 {
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+.requestACallback h4 {
+    text-align: center;
+}
+
+.requestACallback input {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .05);
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.requestACallback input:first-of-type {
+    background-image: url(../images/image.png);
+    background-repeat: no-repeat;
+    background-position: 97%;
+}
+
+/* Start Learning Banner */
+.startLearningBanner {
+    width: 100%;
+    height: 13rem;
+    background-image: url(../images/horizontal-cta-background.jpg);
+    background-size: cover;
+    color: var(--white);
+}
+
+.startLearning h2 {
+    font-size: 2.4rem;
+    padding-top: 0;
+    padding-bottom: .3rem;
+}
+
+.startLearning h4 {
+    font-weight: 400;
+}
+
+.startLearningBanner h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
 }
