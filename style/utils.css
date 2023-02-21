@@ -76,7 +76,6 @@ header i {
 /* BUTTONS */
 button {
     height: 35px;
-    margin-left: 1rem;
     padding: 0 1rem;
     color: white;
     background-color: var(--green);
@@ -91,6 +90,15 @@ button {
 
 button:hover {
     filter: brightness(105%);
+}
+
+button.outlined {
+    height: 30px;
+    margin: 0;
+    background-color: inherit;
+    color: var(--lightGrey);
+    border: 3px solid var(--lightGrey);
+    font-weight: 600;
 }
 
 
@@ -108,3 +116,33 @@ button:hover {
 span {
     display: flex;
 }
+
+  /* CIRCLES */
+  .circular-progress {
+    margin: 2rem 0;
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+
+   .circular-progress::before{
+    content: '';
+    position: absolute;
+    width: 85%;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    border-radius: 50%;
+   }
+
+   .progress-value {
+    position: relative;
+   }
+   .coursesBox span {
+    opacity: .8;
+    text-align: center;
+    padding: 10%;
+   }

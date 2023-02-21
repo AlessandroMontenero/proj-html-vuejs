@@ -47,9 +47,11 @@ header {
 
 .navbar ul {
     display: flex;
+    justify-content: space-around;
     list-style: none;
     gap: 2rem;
     padding: 0;
+    padding-right: 1rem;
     font-size: .8rem;
 }
 
@@ -196,3 +198,153 @@ header {
 }
 
 /* Courses Section */
+.courses {
+    width: 100%;
+    background-image: url(../images/promise-background.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding-bottom: 1rem;
+}
+
+.coursesBottom {
+    transform: translateY(-1px);
+    margin-bottom: 1rem;
+    background-image: url(../svg/driving-triangle.svg);
+    background-size: 100% 6rem;
+    background-repeat: no-repeat;
+}
+
+.coursesBox {
+    width: 40%;
+    background-color: white;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, .2);
+}
+
+.coursesBox img.new {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 6px 0 50% 0;
+    align-self: flex-start;
+    position: absolute;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.courserNew {
+    transform: translateY(-35px);
+}
+
+.coursesBox h2 {
+    margin: 1.5rem;
+    font-size: 1.7rem;
+    z-index: 1;
+}
+
+.coursesBox h4 {
+    font-size: .9rem;
+    line-height: 1.7rem;
+    margin: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.courses .box {
+    width: 30%;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.courses .box img {
+    width: 95%;
+}
+
+.courses .box h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: .5rem;
+    color: var(--lightGrey);
+}
+
+.coursesBottom .container {
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.coursesBox {
+    width: 32%;
+    box-sizing: border-box;
+    background-color: var(--white);
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    border-top: 3px solid var(--green);
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contacts */
+.moreAboutUs {
+    width: 100%;
+    margin-bottom: 2rem;
+    color: rgba(0, 0, 0, .8);
+}
+
+.moreAboutUs h2 {
+    font-size: 2.5rem;
+}
+
+.moreAboutUs span {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, .7);
+}
+
+.moreAboutUs button {
+    min-width: 25%;
+    margin-left: 1rem;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contacts .coursesBox {
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.coursesBox.active {
+    width: 35%;
+    margin-bottom: 0;
+}
+
+.coursesBox img {
+    width: 80%;
+    margin: 1.5rem;
+    border-radius: 2px;
+}
+
+.socialContainer {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+
+.ratesBox {
+    aspect-ratio: 1 / 1;
+    align-self: center;
+}

@@ -49,15 +49,15 @@
             <ul>
               <li v-for="item in navItems">
                 <div v-if="item.new != true">
-                  <a href="item.url">{{item.label}}</a> 
+                  <a :href="item.url">{{item.label}}</a>
                 </div>
                 <div class="new" v-else="">
-                  <a href="item.url">{{item.label}}</a> 
+                  <a :href="item.url">{{item.label}}</a>
                   <div class="newBanner">NEW</div>
                 </div>
               </li>
             </ul>
-            <button> BOOK NOW</button>
+            <button>BOOK NOW</button>
           </nav>
         </div>
       </div>
@@ -128,8 +128,72 @@
           <h3><i class="fa-solid fa-phone-flip"></i> 1-800-555-555</h3>
         </div>
       </section>
-        
+      <section class="courses" id="courses">
+        <div class="container">
+          <div class="coursesBox courserNew">
+            <img src="./images/new-corner.jpg" alt="" class="new" />
+            <h2>Courses</h2>
+            <h4>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+              quidem, iure doloribus odio dolorum consectetur repellat fugit
+              minima sed. Consectetur.
+            </h4>
+            <a href="#"><button>COURSE INFORMATION</button></a>
+          </div>
+          <div class="box" v-for="box in courses">
+            <img :src="'./images/' + box.img" alt="" />
+            <h4>{{box.label}}</h4>
+            <a href="#"><button class="outlined">LEARN MORE</button></a>
+          </div>
+        </div>
       </section>
+      <div class="coursesBottom" id="coursesBottom">
+        <div class="container">
+          <div v-for="(box, index) in ratesBoxes" class="coursesBox ratesBox">
+            <div
+              @click="progressValue(index)"
+              class="circular-progress"
+              :style="{background: 'conic-gradient(var(--green) '+ (box.value / 100) * 360 +'deg, var(--whiteGrey) 0deg )'}"
+            >
+              <span class="progress-value"> <span>{{box.value}}%</span> </span>
+            </div>
+            <span>{{box.label}}</span>
+          </div>
+
+          <div class="contacts">
+            <div class="moreAboutUs">
+              <h2>Your Instructors</h2>
+              <span>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Aspernatur nobis architecto explicabo dolorem deserunt id, iste
+                beatae porro esse consectetur!
+                <button>MORE ABOUT US</button>
+              </span>
+            </div>
+            <div
+              v-for="(contact, index) in contacts"
+              class="coursesBox"
+              :class="{active : index==1}"
+            >
+              <img :src="'./images/' + contact.img" alt="" />
+              <h3>{{contact.name}}</h3>
+              <div class="socialContainer">
+                <a :href="contact.facebookLink"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a :href="contact.twitterLink"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a :href="contact.instagramLink"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+              <span>{{contact.descr}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      ciao
     </main>
 
     <!-- FOOTER -->
