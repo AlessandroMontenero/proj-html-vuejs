@@ -276,7 +276,50 @@
         </div>
       </section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <section class="footerHead">
+        <div class="container">
+          <div class="col">
+            <img src="./images/avada-drivers-logo-2x.png" alt="" />
+            <h4>
+              Avada Driving School is the right choice for experienced drivers
+              looking for a refresher course, or the brand new driver wanting to
+              pass first time
+            </h4>
+          </div>
+          <div class="col col-details">
+            <h2>CONTACT DETAILS</h2>
+            <div class="row" v-for="(item, index) in details">
+              <div class="icon" v-html="item.icon"></div>
+              <div class="text">
+                <a href="#"><h4>{{item.label}}</h4></a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-courses">
+            <h2>COURSES</h2>
+            <div class="row" v-for="(item, index) in courses">
+              <div class="icon" v-html="item.icon"></div>
+              <div class="text">
+                <a href="#"><h4>{{item.label}}</h4></a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <img src="./images/footer-ad-grid.png" alt="" />
+            <button>BOOK NOW</button>
+          </div>
+        </div>
+      </section>
+      <section class="footerDown">
+        <div class="container">
+          <h4>
+            ©Copyright 2012-2020 | Avada Theme by <a href="#">ThemeFusion</a> |
+            All Rights Reserved | Powered by <a href="#">WordPress</a>
+          </h4>
+        </div>
+      </section>
+    </footer>
 
     <!-- Vue -->
     <script src="https://unpkg.com/vue"></script>

@@ -260,3 +260,46 @@ createApp({
     }
   }
 }).mount('#newsteller')
+
+createApp({
+  data() {
+    return {
+      details: [
+        {
+          icon: '<i class="fa-solid fa-house"></i>',
+          label: '12345 North Main Street, New York, NY 5555555'
+        },
+        {
+          icon: '<i class="fa-solid fa-phone-flip"></i>',
+          label: '1.800.555.6789'
+        },
+        {
+          icon: '<i class="fa-solid fa-envelope"></i>',
+          label: 'info@your-domain.com'
+        },
+        {
+          icon: '<i class="fa-solid fa-link"></i>',
+          label: 'Theme-Fusion.com'
+        },
+      ],
+      courses: [
+        {
+          icon: '<i class="fa-regular fa-circle-right"></i>',
+          label: 'Pass Plus'
+        },
+        {
+          icon: '<i class="fa-regular fa-circle-right"></i>',
+          label: 'Intensive Course'
+        },
+        {
+          icon: '<i class="fa-regular fa-circle-right"></i>',
+          label: 'Automatic'
+        },
+        {
+          icon: '<i class="fa-regular fa-circle-right"></i>',
+          label: 'Instructor Training'
+        },
+      ]
+    }
+  }
+}).mount('#footer')

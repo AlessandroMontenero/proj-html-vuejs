@@ -534,7 +534,7 @@ header {
 
 .newsteller h2 {
     font-size: 2.5rem;
-    margin: 1rem 0;
+    margin: 3rem 0;
     padding: 0;
 }
 
@@ -557,4 +557,95 @@ header {
 .newsteller h5 {
     margin: 2rem 0 4rem 0;
     opacity: .6;
+}
+
+/* Footer */
+footer {
+    background-color: var(--darkGrey);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+.footerHead {
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-around;
+    z-index: 1;
+    background-image: url(../images/footer-background-color.jpg);
+    margin-top: -8rem ;
+}
+
+.footerHead .container {
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.footerDown .container {
+    justify-content: center;
+}
+
+
+
+.footerHead .col {
+    width: 22%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.footerHead .col img {
+    width: 100%;
+}
+
+.footerHead h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    padding-top: 0;
+    color: white;
+}
+
+footer h4 {
+    color: var(--lightGrey);
+    font-size: .8rem;
+    line-height: 1.2rem;
+}
+
+footer .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: var(--white);
+}
+
+footer .icon {
+    width: 10%;
+    color: var(--lightGrey);
+}
+
+footer .text {
+    width: 90%;
+
+}
+
+footer .col-courses i,
+footer .col-courses h4{
+    color: var(--green);
+}
+
+.footerDown {
+    width: 100%;
+    text-align: center;
+    height: 5rem;
+}
+
+footer a {
+    color: var(--green);
+}
+
+footer a:hover {
+    filter: brightness(120%);
 }
