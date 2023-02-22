@@ -3,7 +3,7 @@
     --green: #7ABC64;
     --white: #FFFFFF;
     --whiteGrey: #F6F6F6;
-    --darkGrey: #494C4E;
+    --darkGrey: rgb(73, 76, 78);
     --lightGrey: #929AA3;
 }
 
@@ -26,12 +26,14 @@ header {
     width: 100%;
     color: var(--white);
     z-index: 5;
+    transition: all 0.01s linear;
 }
 
 .navContainer {
-    padding: .7rem 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(73, 76, 78, .3);
+    
     backdrop-filter: blur(10px);
+    transition: all 0.4s linear;
 }
 
 .navbar .logo img {
@@ -48,6 +50,7 @@ header {
 .navbar ul {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     list-style: none;
     gap: 2rem;
     padding: 0;
@@ -55,10 +58,21 @@ header {
     font-size: .8rem;
 }
 
+.navbar li {
+    color: var(--white);
+    transition: color 0.1s linear;
+    padding: 4px 0 4px 0;
+}
+
+.navbar .active,
+.navbar li:not(:has(button)):hover {
+    color: var(--green);
+    border-bottom: 3px solid var(--green);
+}
 /* FIXED BUTTONS */
 .fixedButtons {
     position: fixed;
-    z-index: 1;
+    z-index: 6;
     display: flex;
     top: 90px;
     right: 0;
@@ -431,6 +445,7 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+    line-height: 2rem;
     font-style: italic;
     font-weight: 300;
 }

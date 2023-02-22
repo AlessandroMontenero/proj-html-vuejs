@@ -4,6 +4,8 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      activeTab: 0,
+      navPadding: '0.7',
       navItems: [
         {
           label: 'HOME',
@@ -37,6 +39,16 @@ createApp({
         },
       ]
     }
+  },
+  mounted() {
+    addEventListener("scroll", (event)=> {
+      if (window.pageYOffset > 30) {
+        this.navPadding = '0'
+      }
+      else {
+        this.navPadding = '0.2'
+      }
+    })
   }
 }).mount('#navbar')
 
@@ -175,22 +187,22 @@ createApp({
         {
           img: 'testimonial-grant.png',
           name: 'Grant',
-          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, blanditiis.'
+          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quae, sequi perspiciatis iure a voluptates minus ducimus enim accusamus! Molestias.'
         },
         {
           img: 'testimonial-harold.png',
           name: 'Harold',
-          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In, magnam nulla?'
+          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam veniam dolorem ipsum? Quaerat accusantium dignissimos voluptatem facere doloribus numquam debitis!'
         },
         {
           img: 'testimonial-kate.png',
           name: 'Kate',
-          quote: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis quod dolore?'
+          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta earum necessitatibus est consectetur cupiditate fugit accusamus soluta temporibus maxime doloremque?'
         },
         {
           img: 'testimonial-kelly.png',
           name: 'Kelly',
-          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, blanditiis.'
+          quote: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione alias voluptate molestias officiis illo, sint ipsam provident cupiditate quasi quidem.'
         },
         {
           img: 'testimonial-sophia.png',
@@ -199,5 +211,15 @@ createApp({
         },
       ]
     }
+  },
+  mounted() {
+    setInterval(()=> {
+      if (this.activeIndex < (this.testimonials.length - 1)){
+        this.activeIndex++
+      }
+      else {
+        this.activeIndex = 0
+      }
+    }, 5000)
   }
 }).mount('#testimonials')

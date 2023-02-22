@@ -21,6 +21,7 @@ a {
     display: inline;
     filter: brightness(100%);
     transition: filter 0.1s linear;
+    color: white;
 }
 
 

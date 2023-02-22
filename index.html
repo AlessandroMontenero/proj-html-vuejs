@@ -40,14 +40,17 @@
 
     <!-- NAVBAR -->
     <div class="navbar" id="navbar">
-      <div class="navContainer">
+      <div class="navContainer" :style="{padding: navPadding +'rem 0'}">
         <div class="container">
           <div class="logo">
             <img src="./images/avada-drivers-logo-2x.png" alt="" />
           </div>
           <nav>
             <ul>
-              <li v-for="item in navItems">
+              <li
+                v-for="(item,index) in navItems"
+                :class="{active: (index == activeTab)}"
+              >
                 <div v-if="item.new != true">
                   <a :href="item.url">{{item.label}}</a>
                 </div>
@@ -56,13 +59,14 @@
                   <div class="newBanner">NEW</div>
                 </div>
               </li>
+              <li>
+                <button>BOOK NOW</button>
+              </li>
             </ul>
-            <button>BOOK NOW</button>
           </nav>
         </div>
       </div>
     </div>
-
     <!-- FIXED BUTTONS -->
     <div class="fixedButtons">
       <button>
