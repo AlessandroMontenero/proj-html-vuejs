@@ -223,3 +223,40 @@ createApp({
     }, 5000)
   }
 }).mount('#testimonials')
+
+createApp({
+  data() {
+    return {
+      newsArray: [
+        {
+          title: 'What Car to Start With?',
+          date: 'February 7th, 2019',
+          comments: '0',
+          img: 'blog-choosecar-700x441.jpg',
+          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+        },
+        {
+          title: 'Avada Driving School Expanding',
+          date: 'February 7th, 2019',
+          comments: '0',
+          img: 'blogpost-10and2-700x441.jpg',
+          body: 'Lorem ipsum dolor sit amet, consectetur adipiscing'
+        },
+      ]
+    }
+  }
+}).mount('#latestNews')
+
+createApp({
+  data() {
+    return {
+      email: ''
+    }
+  },
+  methods: {
+    readEmail(){
+      console.log(this.email)
+      this.email = ''
+    }
+  }
+}).mount('#newsteller')

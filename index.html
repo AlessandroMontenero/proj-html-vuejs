@@ -245,6 +245,36 @@
           </div>
         </div>
       </section>
+      <!-- Latest News -->
+      <section class="latestNews" id="latestNews">
+        <div class="container">
+          <div class="coursesBox">
+            <h2>Latest News</h2>
+            <div class="news">
+              <div class="newsBox" v-for="news in newsArray">
+                <img :src="'./images/' + news.img" alt="" />
+                <h3>{{news.title}}</h3>
+                <h5>{{news.date}} | {{news.comments}} Comments</h5>
+                <h4>{{news.body}}</h4>
+              </div>
+            </div>
+            <button>MORE FROM THE BLOG</button>
+          </div>
+          <img class="newsTriangle" src="./svg/driving-triangle.svg" alt="" />
+        </div>
+      </section>
+      <!-- Newsteller -->
+      <section class="newsteller" id="newsteller">
+        <div class="container">
+          <h2>Sign up to our Newsteller</h2>
+          <input type="text" v-model="email" />
+          <button @click="readEmail()">SUBSCRIBE</button>
+          <h5>
+            (We do not share your data with anybody, and only use it for its
+            intended purpose)
+          </h5>
+        </div>
+      </section>
     </main>
     <footer id="footer"></footer>
 

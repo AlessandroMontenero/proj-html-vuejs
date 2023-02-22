@@ -173,7 +173,7 @@ header {
     text-align: center;
 }
 
-.requestACallback input {
+ input {
     width: 100%;
     background-color: rgba(0, 0, 0, .05);
     border: 1px solid rgba(0, 0, 0, .2);
@@ -448,4 +448,113 @@ header {
     line-height: 2rem;
     font-style: italic;
     font-weight: 300;
+}
+
+/* Latest News Section */
+.latestNews {
+    width: 100%;
+    transform: translateY(-8rem);
+    background-image: url(../images/latestnews-background.jpg);
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.latestNews .container {
+    flex-wrap: wrap;
+}
+
+.latestNews h2 {
+    margin: 0;
+    margin-top: 2rem;
+    opacity: .7;
+}
+
+.latestNews .coursesBox {
+    border-color: var(--lightGrey);
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3rem);
+    border-radius: 10px 10px 0 0;
+}
+
+.news {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.latestNews .newsBox {
+    width: 35%;
+    height: 300px;
+    text-align: center;
+}
+
+.latestNews .newsBox img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.latestNews .newsBox h3 {
+    color: var(--green);
+    padding-bottom: 0;
+    margin-bottom: .2rem;
+}
+
+.latestNews .newsBox h5 {
+    font-size: .6rem;
+    opacity: .4;
+}
+
+.latestNews .newsBox h4 {
+    font-size: .8rem;
+    opacity: .6;
+}
+
+.newsTriangle {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+    transform: translateY(-4rem);
+    fill: white;
+    filter: brightness(150%);
+    z-index: 2;
+}
+
+/* Newsteller Section */
+.newsteller {
+    transform: translateY(-8rem);
+    background-image: url(../images/newsletter_background.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.newsteller h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.newsteller .container {
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.newsteller input {
+    width: 70%;
+    margin: 2rem 0;
+    background-color: var(--white);
+}
+
+.newsteller button {
+    width: 74%;
+}
+
+.newsteller h5 {
+    margin: 2rem 0 4rem 0;
+    opacity: .6;
 }
