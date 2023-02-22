@@ -73,36 +73,6 @@ header {
     color: var(--green);
     border-bottom: 3px solid var(--green);
 }
-/* FIXED BUTTONS */
-.fixedButtons {
-    position: fixed;
-    z-index: 6;
-    display: flex;
-    top: 90px;
-    right: 0;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-}
-.fixedButtons button {
-    padding: 2px;
-    box-shadow: 0 0 30px 1px rgba(0, 0, 0, .2);
-
-}
-.fixedButtons i {
-    font-size: 2rem;
-}
-.fixedButtons .sale {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    color: var(--green);
-    margin-left: 4px;
-}
-
-.fixedButtons .dollarPrice {
-    font-size: 2rem;
-}
 
 /* HERO */
 
@@ -292,11 +262,6 @@ header {
     margin-bottom: 1rem;
 }
 
-.moreAboutUs button {
-    min-width: 25%;
-    margin-left: 1rem;
-}
-
 .contacts {
     display: flex;
     justify-content: space-between;
@@ -348,7 +313,6 @@ header {
     height: auto;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .testimonials span {
@@ -470,19 +434,14 @@ header {
 }
 
 .newsteller .container {
-    justify-content:flex-start;
-    align-items: center;
     flex-direction: column;
+    justify-content:flex-start;
 }
 
 .newsteller input {
     width: 70%;
     margin: 2rem 0;
     background-color: var(--white);
-}
-
-.newsteller button {
-    width: 74%;
 }
 
 .newsteller h5 {
