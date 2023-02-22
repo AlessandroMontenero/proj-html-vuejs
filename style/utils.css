@@ -12,6 +12,10 @@ a {
     color: inherit;
 }
 
+a:hover {
+    filter: brightness(120%);
+}
+
 /* BANNERS */
 .newBanner {
     background-color: #7ABC64;
@@ -37,21 +41,34 @@ html, body {
 }
 
 h2  {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
     padding: 1rem 0;
     margin: 0;
+    line-height: 2.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
 }
 
 h4 {
-    font-size: 1.3rem;
-    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    opacity: .8;
     margin: 0;
 }
 
 h5 {
     font-size: .8rem;
+    font-weight: 400;
+    opacity: .5;
     margin: 0;
     padding: 0;
+    line-height: 1.5rem;
 }
 
 /* ICONS */
@@ -97,8 +114,9 @@ button.outlined {
     height: 30px;
     margin: 0;
     background-color: inherit;
-    color: var(--lightGrey);
-    border: 3px solid var(--lightGrey);
+    color: black;
+    opacity: .6;
+    border: 3px solid black;
     font-weight: 600;
 }
 

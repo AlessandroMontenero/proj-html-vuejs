@@ -52,10 +52,10 @@
                 :class="{active: (index == activeTab)}"
               >
                 <div v-if="item.new != true">
-                  <a :href="item.url">{{item.label}}</a>
+                  <a :href="item.url"><h4>{{item.label}}</h4></a>
                 </div>
                 <div class="new" v-else="">
-                  <a :href="item.url">{{item.label}}</a>
+                  <a :href="item.url"><h4>{{item.label}}</h4></a>
                   <div class="newBanner">NEW</div>
                 </div>
               </li>
@@ -129,7 +129,7 @@
             <h2>Start Learning to Drive Today</h2>
             <h4>Give us a call to schedule your first driving lesson</h4>
           </div>
-          <h3><i class="fa-solid fa-phone-flip"></i> 1-800-555-555</h3>
+          <h2><i class="fa-solid fa-phone-flip"></i> 1-800-555-555</h2>
         </div>
       </section>
       <section class="courses" id="courses">
@@ -204,9 +204,9 @@
         <div class="container">
           <span>
             <h2>Testimonials</h2>
-            <h4>
+            <h3>
               Here's what our happy drivers had to say about our services:
-            </h4>
+            </h3>
           </span>
           <div class="imgContainer">
             <transition-group name="list">
@@ -288,7 +288,7 @@
             </h4>
           </div>
           <div class="col col-details">
-            <h2>CONTACT DETAILS</h2>
+            <h3>CONTACT DETAILS</h3>
             <div class="row" v-for="(item, index) in details">
               <div class="icon" v-html="item.icon"></div>
               <div class="text">
@@ -297,7 +297,7 @@
             </div>
           </div>
           <div class="col col-courses">
-            <h2>COURSES</h2>
+            <h3>COURSES</h3>
             <div class="row" v-for="(item, index) in courses">
               <div class="icon" v-html="item.icon"></div>
               <div class="text">
