@@ -171,9 +171,9 @@ span {
 
   /* CIRCLES */
   .circular-progress {
-    margin: 2rem 0;
+    margin: 1rem 0;
     position: relative;
-    width: 50%;
+    width: 60%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     display: flex;
@@ -192,6 +192,7 @@ span {
 
    .progress-value {
     position: relative;
+    font-size: 2rem;
    }
    .coursesBox span {
     opacity: .8;

@@ -43,10 +43,10 @@ createApp({
   mounted() {
     addEventListener("scroll", (event)=> {
       if (window.pageYOffset > 30) {
-        this.navPadding = '0'
+        this.navPadding = '0.2'
       }
       else {
-        this.navPadding = '0.2'
+        this.navPadding = '0.4'
       }
     })
   }

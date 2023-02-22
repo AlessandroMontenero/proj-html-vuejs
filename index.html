@@ -137,11 +137,11 @@
           <div class="coursesBox courserNew">
             <img src="./images/new-corner.jpg" alt="" class="new" />
             <h2>Courses</h2>
-            <h4>
+            <h5>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
               quidem, iure doloribus odio dolorum consectetur repellat fugit
               minima sed. Consectetur.
-            </h4>
+            </h5>
             <a href="#"><button>COURSE INFORMATION</button></a>
           </div>
           <div class="box" v-for="box in courses">
@@ -164,7 +164,7 @@
             >
               <span class="progress-value"> <span>{{box.value}}%</span> </span>
             </div>
-            <span>{{box.label}}</span>
+            <span><h4>{{box.label}}</h4></span>
           </div>
 
           <div class="contacts">
@@ -204,9 +204,9 @@
         <div class="container">
           <span>
             <h2>Testimonials</h2>
-            <h3>
+            <h4>
               Here's what our happy drivers had to say about our services:
-            </h3>
+            </h4>
           </span>
           <div class="imgContainer">
             <transition-group name="list">

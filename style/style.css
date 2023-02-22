@@ -208,9 +208,10 @@ header {
 
 .courserNew {
     transform: translateY(-35px);
+    
 }
 
-.coursesBox h4 {
+.coursesBox h5 {
     margin: 1.5rem;
     margin-top: 0;
     text-align: center;
@@ -218,9 +219,14 @@ header {
 }
 
 .courses .box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     width: 30%;
     margin-left: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
+    color: var(--darkGrey);
 }
 
 .courses .box img {
@@ -288,7 +294,7 @@ header {
 
 .socialContainer {
     display: flex;
-    margin: 0;
+    margin: 1rem 0 0 0;
     padding: 0;
     gap: 10px;
 }
@@ -401,6 +407,8 @@ header {
     width: 35%;
     height: 300px;
     text-align: center;
+    color: rgba(0, 0, 0, .5);
+    margin-bottom: 2rem;
 }
 
 .latestNews .newsBox img {
@@ -454,6 +462,7 @@ footer {
     display: flex;
     position: absolute;
     flex-direction: column;
+    color: var(--lightGrey);
 }
 .footerHead {
     display: flex;
@@ -520,6 +529,6 @@ footer .col-courses h4{
     opacity: .6;
 }
 
-footer a {
+footer .col-courses a {
     color: var(--green);
 }
