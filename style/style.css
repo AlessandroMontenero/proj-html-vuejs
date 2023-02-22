@@ -30,8 +30,7 @@ header {
 }
 
 .navContainer {
-    background-color: rgba(73, 76, 78, .3);
-    
+    background-color: rgba(73, 76, 78, .3);    
     backdrop-filter: blur(10px);
     transition: all 0.4s linear;
 }
@@ -77,12 +76,14 @@ header {
 /* HERO */
 
 .hero {
-    height: 580px;
+    height: 80vh;
     color: var(--white);
     background-image: url(../images/homepage-hero-background.jpg);
     width: 100%;
     background-position: bottom;
     background-size: cover;
+    background-attachment: fixed;
+
 }
 
 .heroContent {
@@ -145,7 +146,9 @@ header {
     height: 12rem;
     background-image: url(../images/horizontal-cta-background.jpg);
     background-size: cover;
+    background-position: center;
     color: var(--white);
+    background-attachment: fixed;
 }
 
 .startLearning {
@@ -199,15 +202,18 @@ header {
     height: 4rem;
     width: 4rem;
     border-radius: 6px 0 50% 0;
-    align-self: flex-start;
     position: absolute;
     z-index: -1;
+    top: 0;
+    left: 0;
     padding: 0;
     margin: 0;
 }
 
 .courserNew {
     transform: translateY(-35px);
+    align-self: stretch;
+    justify-content: space-around;
     
 }
 
@@ -221,16 +227,19 @@ header {
 .courses .box {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
     width: 30%;
     margin-left: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     text-align: center;
     color: var(--darkGrey);
 }
 
 .courses .box img {
-    width: 95%;
+    margin-top: 1rem;
+    width: 80%;
 }
 
 
@@ -308,10 +317,11 @@ header {
 .testimonials {
     transform: translateY(-8rem);
     padding-top: 12rem;
-    height: 42rem;
+    height: 70vh;
+    min-height: 650px;
     background-image: url(../images/testimonial-background.jpg);
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
     z-index: -1;
 }
 
@@ -382,6 +392,7 @@ header {
     background-image: url(../images/latestnews-background.jpg);
     margin-bottom: 0;
     padding-bottom: 0;
+    background-attachment: fixed;
 }
 
 .latestNews .container {
@@ -437,6 +448,7 @@ header {
 .newsteller {
     transform: translateY(-8rem);
     background-image: url(../images/newsletter_background.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-position: bottom;
 }

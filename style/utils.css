@@ -40,6 +40,11 @@ html, body {
     padding: 0;
 }
 
+h1 {
+    font-size: 4.5rem;
+    margin: 1rem 0;
+}
+
 h2  {
     font-size: 2rem;
     font-weight: 500;
@@ -147,7 +152,7 @@ button.outlined {
     flex-direction: row;
     align-items: flex-start;
     color: var(--green);
-    margin-left: 4px;
+    margin-left: 7px;
 }
 
 .fixedButtons .dollarPrice {
