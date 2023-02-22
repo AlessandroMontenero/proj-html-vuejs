@@ -146,3 +146,31 @@ span {
     text-align: center;
     padding: 10%;
    }
+
+   /* DOTS */
+   .dots {
+    display: flex;
+    gap: 4px;
+   }
+   .dot {
+    width: 12px;
+    aspect-ratio: 1 / 1;
+    border: 3px solid var(--lightGrey);
+    border-radius: 50px;
+   }
+   .dot.active {
+    background-color: var(--lightGrey);
+   }
+
+   .list-enter-active,
+   .list-leave-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all .4s ease;
+   }
+   .list-enter-from{
+    opacity: 0;
+   }
+   .list-leave-to {
+     opacity: 0;
+   }

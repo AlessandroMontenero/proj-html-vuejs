@@ -146,6 +146,9 @@
             <a href="#"><button class="outlined">LEARN MORE</button></a>
           </div>
         </div>
+        <div class="coursesFooter">
+          <img src="./svg/driving-triangle.svg" alt="" />
+        </div>
       </section>
       <div class="coursesBottom" id="coursesBottom">
         <div class="container">
@@ -193,10 +196,52 @@
           </div>
         </div>
       </div>
-      ciao
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <span>
+            <h2>Testimonials</h2>
+            <h4>
+              Here's what our happy drivers had to say about our services:
+            </h4>
+          </span>
+          <div class="imgContainer">
+            <transition-group name="list">
+              <img
+                :src="'./images/' + testimonial.img"
+                v-for="(testimonial, index) in testimonials"
+                :key="testimonial.name"
+                v-show="index == activeIndex"
+                alt=""
+              />
+            </transition-group>
+          </div>
+          <div class="quote">
+            <span
+              :key="testimonial.name"
+              v-show="index == activeIndex"
+              v-for="(testimonial, index) in testimonials"
+              class="testimonialQuote"
+              >{{testimonial.quote}}</span
+            >
+            <span
+              class="testimonialName"
+              :key="testimonial.name"
+              v-show="index == activeIndex"
+              v-for="(testimonial, index) in testimonials"
+              >{{testimonial.name}}</span
+            >
+          </div>
+          <div class="dots">
+            <div
+              class="dot"
+              v-for="(testimonial, index) in testimonials"
+              :class="{active : (index == activeIndex)}"
+              @click="activeIndex = index"
+            ></div>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <!-- FOOTER -->
     <footer id="footer"></footer>
 
     <!-- Vue -->

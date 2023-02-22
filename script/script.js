@@ -167,3 +167,37 @@ createApp({
   }
 }).mount('#coursesBottom')
 
+createApp({
+  data() {
+    return {
+      activeIndex: 0,
+      testimonials: [
+        {
+          img: 'testimonial-grant.png',
+          name: 'Grant',
+          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, blanditiis.'
+        },
+        {
+          img: 'testimonial-harold.png',
+          name: 'Harold',
+          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In, magnam nulla?'
+        },
+        {
+          img: 'testimonial-kate.png',
+          name: 'Kate',
+          quote: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione facilis quod dolore?'
+        },
+        {
+          img: 'testimonial-kelly.png',
+          name: 'Kelly',
+          quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, blanditiis.'
+        },
+        {
+          img: 'testimonial-sophia.png',
+          name: 'Sophia Jones',
+          quote: 'Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly reccomended.'
+        },
+      ]
+    }
+  }
+}).mount('#testimonials')
