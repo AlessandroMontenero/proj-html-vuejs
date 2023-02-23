@@ -81,11 +81,7 @@ createApp({
     addEventListener("scroll", (event) => {  
       let el = document.getElementById("requestACallback")
       var elDistanceToTop = parseInt((window.pageYOffset + el.getBoundingClientRect().top)) 
-        console.log(-(el.getBoundingClientRect().top - (window.pageYOffset)))
-        console.log(elDistanceToTop)
-        if ((el.getBoundingClientRect().top - (window.pageYOffset)))
     })
-    
   }
 }).mount('#requestACallback')
 
