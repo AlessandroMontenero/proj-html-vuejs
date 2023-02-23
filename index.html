@@ -91,7 +91,7 @@
           <h2>We offer the finest driving tuition money can buy</h2>
         </div>
       </div>
-      <section class="callback">
+      <section class="callback" id="requestACallback">
         <div class="container">
           <div class="description">
             <h2>Get Behind The Wheel</h2>
@@ -109,7 +109,10 @@
               praesentium. Dignissimos, neque! Dolore, alias hic.
             </h5>
           </div>
-          <div class="requestACallback" id="requestACallback">
+          <div
+            class="requestACallback"
+            :style="{transform: ' translateY('+ offsetY +'px)'}"
+          >
             <h2>First Lesson Free!</h2>
             <h4>
               When you make a block booking with us your first lesson is
@@ -253,7 +256,7 @@
             <div class="news">
               <div class="newsBox" v-for="news in newsArray">
                 <img :src="'./images/' + news.img" alt="" />
-                <h3>{{news.title}}</h3>
+                <h3><a href="#">{{news.title}}</a></h3>
                 <h5>{{news.date}} | {{news.comments}} Comments</h5>
                 <h4>{{news.body}}</h4>
               </div>

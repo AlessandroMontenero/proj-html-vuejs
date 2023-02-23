@@ -43,10 +43,10 @@ createApp({
   mounted() {
     addEventListener("scroll", (event)=> {
       if (window.pageYOffset > 30) {
-        this.navPadding = '0.2'
+        this.navPadding = '0'
       }
       else {
-        this.navPadding = '0.4'
+        this.navPadding = '0.7'
       }
     })
   }
@@ -58,7 +58,8 @@ createApp({
       newName: '',
       newEmail: '',
       newTelephone: '',
-      newLocation: ''
+      newLocation: '',
+      offsetY: -40,
     }
   },
   methods: {
@@ -75,6 +76,16 @@ createApp({
       this.newTelephone = ''
       this.newLocation = ''
     }
+  },
+  mounted () {
+    addEventListener("scroll", (event) => {  
+      let el = document.getElementById("requestACallback")
+      var elDistanceToTop = parseInt((window.pageYOffset + el.getBoundingClientRect().top)) 
+        console.log(-(el.getBoundingClientRect().top - (window.pageYOffset)))
+        console.log(elDistanceToTop)
+        if ((el.getBoundingClientRect().top - (window.pageYOffset)))
+    })
+    
   }
 }).mount('#requestACallback')
 
